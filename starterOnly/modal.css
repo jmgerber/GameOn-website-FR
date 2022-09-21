@@ -169,7 +169,7 @@ main {
 }
 
 .content {
-  margin: 5% auto;
+  margin: 4% auto;
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -214,7 +214,6 @@ input {
   display: block;
   margin-top: 7px;
   margin-bottom: 7px;
-  text-align: right;
   line-height: 0.3;
   opacity: 0;
   transition: 0.3s;
@@ -225,8 +224,7 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
-input[data-error]::after {
+/* input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
     color: red;
@@ -321,7 +319,8 @@ input[data-error]::after {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup {
+.btn-signup,
+.btn-close-completed {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -331,6 +330,18 @@ input[data-error]::after {
   color: #fff;
   cursor: pointer;
   border: 0;
+}
+.form-completed {
+  display: none;
+  flex-direction: column;
+  height: 70vh;
+}
+.form-completed h2 {
+  flex: 1;
+  text-align: center;
+  padding-top: 60%;
+  font-size: 36px;
+  font-weight: 400;
 }
 /* custom select styles */
 .custom-select {
@@ -490,7 +501,7 @@ footer {
     content: unset;
   }
   .hero-content .btn-signup {
-    display: none;
+    margin: 59px auto 0;
   }
   .hero-headline {
     font-size: 4.5rem;
