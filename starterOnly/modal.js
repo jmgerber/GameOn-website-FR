@@ -149,10 +149,10 @@ function contestsQuantityVerification (validForm) {
   const contestsQuantityInput = document.querySelector("#quantity")
   const contestsQuantity = contestsQuantityInput.value;
   const contestsQuantityFormData = contestsQuantityInput.parentElement;
-  if (!contestsQuantity) {
+  if (!contestsQuantity || contestsQuantity < 0) {
     validForm = false;
     contestsQuantityFormData.dataset.errorVisible = true;
-    contestsQuantityFormData.dataset.error = "Veuillez entrer une valeur."
+    contestsQuantityFormData.dataset.error = "Veuillez entrer une valeur valide."
   } else {
     contestsQuantityFormData.removeAttribute("data-error-visible");
     contestsQuantityFormData.removeAttribute("data-error");
